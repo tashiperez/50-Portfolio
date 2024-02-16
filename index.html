@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/2b11e3122a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.jpg" class="logo">
+            <ul id="sidemenu">
+                <i class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#works">WORKS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>HI, I'M <span>RHEI ANN</span><br></h1>
+            <p>WEB DEVELOPER</p>
+        </div>
+    </div>
+</div>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="rhie.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">ABOUT ME</h1>
+                <p> Hi I'm Rhei Ann, a budding web developer currently immersed in the exciting world of technology and web development. As a student passionate about creating impactful digital experiences, I am pursuing Bachelor of Information Technology at Dalubhasaang Lungsod ng Lucena.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links" onclick="opentab('EDUCATION')">EDUCATION</p>
+                    </div>
+                    
+                    <div class="tab-contents" id="EDUCATION">
+                        <ul>
+                            <li><span>
+                                Dalubhasaan ng Lungsod ng Lucena</span><br>2021-Present</li>
+                            <li><span>St. Augustine School of Nursing</span><br>2019-2021</li>
+                            <li><span>Pagbilao Central Elementary School</span><br> 2008-2015</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="works">
+    <div class="container">
+        <h1 class="sub-title">Works</h1>
+        <div class="work">
+            <h3>Simple Calculator</h3>
+            <img src="cal.png">
+            <a href="https://tashiperez.github.io/Working-Calculator/"><i class="fa-button fa-github" ><h3> LIVE DEMO </h3></i></a>
+            <div class="layer">
+            </div>
+            <div class="work">
+                <h3>CRUD Todo List</h3>
+                <img src="menk.png">
+                <a href="https://tashiperez.github.io/Todo-List/"><i class="fa-button fa-github" ><h3> LIVE DEMO</h3></i></a>
+                <div class="layer">
+                </div>
+            </div>
+            <div class="work">
+                <h3>DOM Color Changer</h3>
+                <img src="col.png">
+                <a href="https://tashiperez.github.io/HandsOn2-colorChanger-WS101/"><i class="fa-button fa-github" ><h3> LIVE DEMO</h3></i></a>
+                <div class="layer">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title"> Let's Connect</h1>
+                <p> I am always open to networking, collaborating on projects, and learning from experienced professionals in the field. If you are as passionate about web development as I am, I would love to connect! Feel free to reach out via and let's explore the possibilities together.</p>
+                <p><i class="fa-solid fa-paper-plane"></i> baldonado.rheiann23@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 09306410836</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+</body>
+</html>
